@@ -30,14 +30,12 @@
     h2 {color: var(--primary);font-size:2em;margin-top:0;}
     ul,li{margin: 10px 0;line-height:1.75em;}
     .chip {display:inline-block;background:#bfdbfe;color:#0f4067;font-size:1em; border-radius:21px;padding:8px 16px;margin:7px 7px 1px 0;}
-    .project-block{margin-bottom:36px;}
-    .project-title{font-size:1.35em;font-weight:bold;color:#0a416d; margin-bottom:8px;}
+    .project-block{margin-bottom:25px;}
+    .project-title{font-size:1.15em;font-weight:bold;color:#0a416d; margin-bottom:6px;}
     .project-role{color: #777; font-size:1em;}
-    .project-tags{margin-top: 5px; margin-bottom: 18px;}
+    .project-tags{margin-bottom: 10px;}
     .project-tags .chip{background:#f0f9ff;color:#0f4067;}
-    .project-summary{font-size:1.12em;}
-    .project-details{margin-top:13px;padding-left:18px;}
-    .project-details li{font-size:1.04em;}
+    .project-summary{font-size:1.08em; margin-bottom:8px;}
     .link, .link:visited {color: var(--primary); text-decoration: underline;}
     footer {text-align:center;color:#aaa;padding:18px 0 24px 0;}
     @media (max-width:650px) {section{padding:20px 5px;}}
@@ -50,7 +48,7 @@
       <div class="title">Bala Teja Vempati</div>
       <div class="subtitle">Data Analyst | BI Developer | Data Enthusiast</div>
       <div class="about">
-        I’m a data analyst passionate about translating data into actionable business insight. My expertise spans analytics, dashboarding & data storytelling with a focus on robust, scalable solutions. I thrive at the crossroads of business and technology—transforming data into growth opportunities.
+        I’m a data analyst passionate about translating data into actionable insight. My expertise spans business analytics, dashboarding, and scalable data solutions for empowered decisions.
       </div>
       <div class="cta-btns">
         <button class="cta-btn" onclick="showSection('education')"><i class="fa fa-graduation-cap"></i> Education</button>
@@ -114,96 +112,78 @@
     <h2>📊 Projects</h2>
 
     <div class="project-block">
-      <div class="project-title">Shark Tank US Deal Analysis</div>
-      <div class="project-role">Lead Data Analyst & Tableau Developer</div>
+      <div class="project-title">Amazon Best Seller Software Analysis</div>
       <div class="project-tags">
-        <span class="chip">Tablueau</span> <span class="chip">Data Visualization</span>
-        <span class="chip">Storytelling</span> <span class="chip">Venture Capital</span>
-        <span class="chip">Python</span>
+        <span class="chip">Python</span> 
+        <span class="chip">ML Regression</span>
+        <span class="chip">Power BI</span>
       </div>
       <div class="project-summary">
-        <strong>Overview:</strong> An in-depth analysis of the Shark Tank US dataset to unravel factors driving deal success, funding trends across industries, and investor behaviors. Delivered an interactive Tableau dashboard targeted at aspiring entrepreneurs and startup enthusiasts.
+        Analyzed Amazon's best-selling software data to uncover how price, category, and review volume influence product ranking. Designed regression models and visualizations for actionable strategies in pricing and sales optimization.
       </div>
-      <ul class="project-details">
-        <li><strong>Data Source:</strong> Kaggle Shark Tank US data—1,362 pitches, 53 fields, covering entrepreneur backgrounds, startup industries, and funding outcomes.</li>
-        <li><strong>Objective:</strong> Identify what makes pitches succeed—by industry, geography, entrepreneur traits, deal size/equity, and investor pattern.</li>
-        <li>Performed extensive data cleaning, feature engineering, and storyboarding to present compelling, business-relevant insights—not just raw numbers.</li>
-        <li>Created engaging visualizations:
-          <ul>
-             <li>Deal success rates by industry.</li>
-             <li>Distribution of equity offers across states.</li>
-             <li>Diversity and gender analysis in funded startups.</li>
-             <li>Multi-shark vs single-shark trends over time.</li>
-          </ul>
-        </li>
-        <li><strong>Key Findings:</strong> Success skews toward food, health, and tech; Sharks favor founders who know their numbers; reasonable valuations unlock deals; storytelling and vision matter as much as metrics.</li>
-        <li>Resulted in a practical resource for founders who want an edge in venture funding or Shark Tank fans seeking behind-the-scenes trends.</li>
-        <li>
-          <strong>Tools:</strong> Tableau for dashboarding, Python for exploratory data analysis (EDA) and wrangling.
-        </li>
-      </ul>
     </div>
 
     <div class="project-block">
-      <div class="project-title">Amazon Best Seller Software Analysis</div>
-      <div class="project-role">Data Pipeline Designer & ML Modeler</div>
+      <div class="project-title">Shark Tank US Deal Analysis</div>
       <div class="project-tags">
-        <span class="chip">Python</span> <span class="chip">ML Regression</span>
-        <span class="chip">EDA</span> <span class="chip">Power BI</span>
-        <span class="chip">Amazon Marketplace</span>
+        <span class="chip">Tableau</span> 
+        <span class="chip">Data Visualization</span>
+        <span class="chip">Venture Capital</span>
       </div>
       <div class="project-summary">
-        <strong>Overview:</strong> This project uncovers the key drivers of software ranking and sales on Amazon by analyzing over 2,400 software products. The analysis supports pricing and marketing strategies with actionable predictive insights.
+        Explored trends in Shark Tank US data to highlight patterns in funding, industry success rates, and investor preferences. Built interactive dashboards to guide entrepreneurs on strategic pitching and deal structuring.
       </div>
-      <ul class="project-details">
-        <li><strong>Dataset:</strong> Kaggle, including product title, price, star rating, number of ratings, rank, and country.</li>
-        <li><strong>Methodology:</strong>
-          <ul>
-            <li>Data cleaning and advanced feature engineering for category, price tier, popularity, price-per-rating, etc.</li>
-            <li>Exploratory analysis to reveal patterns in pricing, ratings, and review volumes across top software categories.</li>
-            <li>Applied Linear Regression and Random Forest Regressor to predict marketplace rank and reveal key feature importance.</li>
-            <li>Validated models with RMSE and R-squared on training/test data.</li>
-          </ul>
-        </li>
-        <li><strong>Key Insights:</strong>
-          <ul>
-            <li>Category and review volume are strong predictors of sales performance.</li>
-            <li>Random Forest model captured non-linear factors better than linear regression, significantly outperforming it in accuracy.</li>
-            <li>Strategic priorities: focus on exceeding 4.0-star reviews, encourage more ratings, segment pricing strategies by category.</li>
-          </ul>
-        </li>
-        <li><strong>Business Impact:</strong> Armed software companies and sellers with practical steps to dominate Amazon’s competitive landscape based on data-driven, nuanced findings.</li>
-        <li>
-          <strong>Tools:</strong> Python (Pandas, Scikit-learn), Power BI, predictive modeling, data storytelling.
-        </li>
-      </ul>
     </div>
 
+    <div class="project-block">
+      <div class="project-title">Fitness Tracking System Database</div>
+      <div class="project-tags">
+        <span class="chip">SQL</span> 
+        <span class="chip">Database Design</span>
+        <span class="chip">Data Normalization</span>
+      </div>
+      <div class="project-summary">
+        Developed and managed a robust fitness tracking database for storing and analyzing user activity, health metrics, and progress trends. Enhanced performance reporting and delivered personalized insights for improved engagement.
+      </div>
+    </div>
   </section>
 
   <section id="experience">
     <h2>💼 Professional Experience</h2>
     <strong>Northern Illinois University</strong>, Student Manager <span style="color:#888;">(Aug 2023 – May 2025)</span>
     <ul>
-      <li>Supervised analytics team; built automated dashboards for workflow and engagement insights.</li>
-      <li>Designed and migrated centralized databases and led process improvements for data quality and reporting accuracy.</li>
-      <li>Presented insights and KPIs to leadership, driving data-based decision-making.</li>
+      <li>Led analytics team, developed Excel/Power BI dashboards for workflow tracking and performance monitoring.</li>
+      <li>Designed and implemented centralized SQL databases, reducing data redundancy and improving data quality.</li>
+      <li>Created interactive Tableau dashboards to monitor engagement and participation metrics.</li>
+      <li>Automated data processing with Python, streamlining academic resource tracking and reporting.</li>
+      <li>Conducted regular data quality audits on student services data using SQL, increasing reporting accuracy.</li>
+      <li>Guided KPI development for university events, resulting in higher attendance and engagement.</li>
+      <li>Integrated sentiment analysis for student feedback using Python and NLTK.</li>
+      <li>Presented monthly analytics reports to university leadership, influencing strategic decisions.</li>
+      <li>Trained peers on data visualization techniques and best practices for effective communication.</li>
+      <li>Collaborated in data migration projects from Excel to PostgreSQL environments.</li>
     </ul>
     <strong>CGI, Bangalore</strong>, Associate Systems Engineer <span style="color:#888;">(Sep 2021 – Jan 2023)</span>
     <ul>
-      <li>Optimized SQL procedures and scripted ETL logic, reducing reporting cycles and delivering accurate, timely dashboards.</li>
-      <li>Collaborated in agile teams to deliver BI and analytics solutions for government/enterprise clients.</li>
-      <li>Trained junior hires and championed best practices in SQL, BI, and agile analytics delivery.</li>
+      <li>Created, optimized, and maintained SQL queries and stored procedures for large-scale reporting.</li>
+      <li>Engineered Python ETL scripts for extracting, transforming, and loading high-volume datasets.</li>
+      <li>Built client-facing Power BI dashboards for real-time business insights.</li>
+      <li>Worked in agile teams to deliver analytics for government and enterprise clients.</li>
+      <li>Automated KPI logic for business units using Python, reducing monthly reporting cycles.</li>
+      <li>Developed and monitored data pipelines and conducted root-cause analysis for technical issues.</li>
+      <li>Maintained version control and task tracking with Git and JIRA.</li>
+      <li>Documented data dictionaries and metadata for new data warehouse structures.</li>
+      <li>Trained team members on SQL, dashboards, and agile analytics best practices.</li>
     </ul>
   </section>
   <section id="contact">
     <h2>📬 Contact</h2>
     <div>
-      <p>Let’s connect! Available for full-time, contract, and freelance data analyst roles.</p>
+      <p>Let’s connect! Available for data analyst roles.</p>
       <ul>
         <li><i class="fa fa-envelope"></i> <a class="link" href="mailto:vempatibalateja98@gmail.com">vempatibalateja98@gmail.com</a></li>
         <li><i class="fa fa-phone"></i> <a class="link" href="tel:+17792767123">+1 779-276-7123</a></li>
-        <li><i class="fab fa-linkedin"></i> <a class="link" href="https://www.linkedin.com/in/balateja12/">LinkedIn: balateja12</a></li>
+        <li><i class="fab fa-linkedin"></i> <a class="link" href="https://www.linkedin.com/in/bala-teja-vempati">LinkedIn: BalaTeja</a></li>
       </ul>
     </div>
   </section>
