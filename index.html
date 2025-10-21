@@ -4,139 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bala Teja Vempati | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    body { font-family: 'Montserrat', Arial, sans-serif; background: #f8faff; color: #23272f; margin: 0; }
-    header { background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 32px 18px 24px 18px; text-align: center; }
-    h1 { font-size: 2.2rem; color: #0a446b; margin: 8px 0 8px 0; }
-    h2 { color: #294466; margin-top: 36px; }
-    nav { margin: 12px 0 20px 0; }
-    nav a { margin: 0 10px; color: #1da1f2; text-decoration: none; font-weight: 700; }
-    nav a:hover { text-decoration: underline; }
-    .section { max-width: 820px; margin: 0 auto; background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(180,190,195,0.12); padding: 32px 28px; margin-bottom: 26px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-    .list, ul { padding-left: 20px; }
-    footer { text-align: center; color: #999; padding: 15px 0 24px 0; font-size: 1em;}
-    @media (max-width: 900px) {.grid { grid-template-columns: 1fr;}}
-    .subtitle { color: #1da1f2; margin: 0; font-weight: 600;}
-    .contact-info { margin-top: 10px;}
-    .contact-info a { color: #0a446b; text-decoration: none; margin: 0 5px; font-weight: 600; }
-    .badge { display: inline-block; background: #e9edfc; color: #294466; font-size: 0.9em; border-radius: 12px; padding: 3px 12px; margin: 3px 7px 3px 0; }
-    .job-title { font-weight: bold;}
-    .project { margin-bottom: 18px;}
-    .project-title { font-weight: bold; font-size: 1.1em; color: #155292;}
+    :root {
+      --primary: #1da1f2;
+      --accent: #f6d365;
+      --bg: #f7fafc;
+      --section-bg: #fff;
+      --shadow: 0 2px 14px rgba(50,80,140,0.12);
+    }
+    html {scroll-behavior: smooth;}
+    body {font-family: 'Montserrat', Arial, sans-serif; background: var(--bg); color: #173046; margin: 0;}
+    header {background: linear-gradient(90deg,#dbeafe 55%,#bae6fd 100%);padding:52px 0 25px 0;box-shadow: var(--shadow);}
+    .container {max-width: 920px; margin: 0 auto; padding: 0 12px;}
+    .profile-photo {width:124px;height:124px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow: var(--shadow);}
+    .title {font-size:2.5em;font-weight:700;color:var(--primary);}
+    .subtitle {font-weight:500; font-size:1.2em; color: #155292;}
+    .about {margin-top: 22px; font-size: 1.18em;}
+    .cta-btns {margin:28px 0;}
+    .cta-btn {background: var(--primary); color: #fff; border:none; border-radius:22px; padding:13px 33px; margin:8px 9px; font-size:1em; font-weight: 600;
+      cursor: pointer; box-shadow: 0 4px 20px rgba(30,130,230,0.09); transition: transform .18s,box-shadow .13s;}
+    .cta-btn:hover, .cta-btn.active {background: #0f6680; color: #fff; transform: translateY(-1px) scale(1.06);}
+    .animated-stats {display:flex;gap:30px;justify-content:center;margin:30px 0 0 0;}
+    .stat-card {background: #f9fafb; border-radius: 12px; box-shadow: var(--shadow); padding: 18px 26px;text-align:center;}
+    .stat-number {font-size:2em;font-weight:700;color:var(--primary);}
+    section {background: var(--section-bg); border-radius:18px; margin:60px auto 36px auto; box-shadow:var(--shadow);padding:38px 28px;max-width: 760px; opacity:0; transform: translateY(60px); transition:.7s;}
+    section.visible {opacity:1;transform: translateY(0);}
+    h2 {color: var(--primary);font-size:2em;margin-top:0;}
+    strong{color:#294466;}
+    ul,li{margin: 10px 0;line-height:1.75em;}
+    .icons {margin-right:13px;}
+    .chip {display:inline-block;background:#bfdbfe;color:#0f4067;font-size:1em; border-radius:20px;padding:7px 16px;margin:6px 7px 2px 0;}
+    .link, .link:visited {color: var(--primary); text-decoration: underline;}
+    footer {text-align:center;color:#aaa;padding:18px 0 24px 0;}
+    /* Animations */
+    @media (max-width:650px) {
+      .animated-stats{flex-direction:column;}
+      section{padding:20px 5px;}
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bala Teja Vempati</h1>
-    <p class="subtitle">Data Analyst | BI Developer | Data Engineer</p>
-    <div class="contact-info">
-      <span>📍 Chicago, IL (willing for remote)</span> |
-      <span>📧 <a href="mailto:vempatibalateja98@gmail.com">vempatibalateja98@gmail.com</a></span> |
-      <span>📱 +1 779-276-7123</span> |
-      <span><a href="https://www.linkedin.com/in/balateja12/">LinkedIn</a></span>
+    <div class="container" style="text-align:center;">
+      <img src="profile.jpg" alt="Bala Teja Vempati" class="profile-photo" onerror="this.style.display='none'"/>
+      <div class="title">Bala Teja Vempati</div>
+      <div class="subtitle">Data Analyst | BI Developer | Data Enthusiast</div>
+      <div class="about">Transforming data into actionable insights. 3+ years of proven success in analytics, dashboarding & data-driven storytelling for decisions that matter.</div>
+      <div class="cta-btns">
+        <button class="cta-btn" onclick="showSection('education')"><i class="fa fa-graduation-cap icons"></i>Education</button>
+        <button class="cta-btn" onclick="showSection('skills')"><i class="fa fa-laptop-code icons"></i>Skills</button>
+        <button class="cta-btn" onclick="showSection('projects')"><i class="fa fa-chart-bar icons"></i>Projects</button>
+        <button class="cta-btn" onclick="showSection('experience')"><i class="fa fa-briefcase icons"></i>Experience</button>
+        <button class="cta-btn" onclick="showSection('contact')"><i class="fa fa-envelope icons"></i>Contact</button>
+      </div>
+      <div class="animated-stats">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-exp">0</div>
+          <div>Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-pro">0</div>
+          <div>Completed Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-tools">0</div>
+          <div>Tools Mastered</div>
+        </div>
+      </div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-    </nav>
   </header>
-  <main>
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>Analytical and detail-oriented data professional with 3+ years of experience in analytics, visualization, and data engineering. Proven builder of robust data pipelines & BI dashboards, and a passionate supporter of agile development. I love transforming complex datasets into actionable insights that drive results for business and people.</p>
-    </section>
 
-    <section id="skills" class="section">
-      <h2>Skills & Technologies</h2>
-      <div class="grid">
-        <div>
-          <strong>Programming & Analytics</strong>
-          <div>
-            <span class="badge">Python</span>
-            <span class="badge">R</span>
-            <span class="badge">SQL</span>
-            <span class="badge">Tableau</span>
-            <span class="badge">Power BI</span>
-            <span class="badge">Excel / Power Query</span>
-            <span class="badge">Jupyter</span>
-          </div>
-          <strong>Databases</strong><br>
-          <span class="badge">MS SQL Server</span>
-          <span class="badge">PostgreSQL</span>
-          <span class="badge">MySQL</span>
-          <br><strong>Concepts</strong>
-          <div>
-            <span class="badge">Data Modeling</span>
-            <span class="badge">ETL</span>
-            <span class="badge">Predictive Modeling</span>
-            <span class="badge">Data Cleaning</span>
-            <span class="badge">Statistical Analysis</span>
-            <span class="badge">KPI Tracking</span>
-          </div>
-        </div>
-        <div>
-          <strong>Methodologies & Tools</strong><br>
-          <span class="badge">Agile/Scrum</span>
-          <span class="badge">SDLC</span>
-          <span class="badge">Git</span>
-          <span class="badge">JIRA</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Selected Projects</h2>
-      <div class="project">
-        <span class="project-title">Amazon Best Seller Software Analysis</span><br>
-        - Performed data wrangling, feature engineering, and regression modeling on Amazon’s best-selling software data.<br>
-        - Revealed key price, category & review insights to optimize e-commerce performance.
-      </div>
-      <div class="project">
-        <span class="project-title">Shark Tank US Deal Analysis ☑️</span><br>
-        - Built Tableau dashboards analyzing startup funding and equity trends, investor preferences, and pitching success patterns.
-      </div>
-      <div class="project">
-        <span class="project-title">Fitness Tracking System Database</span><br>
-        - Developed a normalized SQL database to support user activity data, health metric analytics, and personalized insights.
-      </div>
-      <!-- Add more projects as desired -->
-    </section>
-
-    <section id="experience" class="section">
-      <h2>Professional Experience</h2>
-      <div>
-        <p class="job-title">Student Manager — Northern Illinois University, IL
-          <strong>(Aug 2023 - May 2025)</strong></p>
-        <ul>
-          <li>Led 5 student analysts—optimized data workflows with Power BI, Excel, SQL.</li>
-          <li>Designed centralized DB system; cut data redundancy 40%.</li>
-          <li>Built Tableau dashboards; delivered insights to leadership.</li>
-          <li>Automated processing scripts in Python (cut manual work by 30%).</li>
-        </ul>
-        <p class="job-title">Associate Systems Engineer — CGI, Bangalore, India
-          <strong>(Sep 2021 - Jan 2023)</strong></p>
-        <ul>
-          <li>Optimized SQL queries; reduced report time by 50%.</li>
-          <li>Built Power BI dashboards for 100+ stakeholders.</li>
-          <li>Automated ETL/KPI logic in Python; cut reporting time 40%.</li>
-          <li>Trained new hires on SQL, dashboards, agile best practices.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <strong>Master of Science, Management Information Systems</strong><br>
-      Northern Illinois University, IL <span style="color:#888;">(Aug 2023 – May 2025)</span>
-    </section>
-  </main>
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <ul>
+      <li>
+        <strong>Master of Science, Management Information Systems</strong><br>
+        Northern Illinois University, IL <br>
+        <span style="color:#888;">2023 – 2025 (Expected)</span>
+      </li>
+      <li>
+        <strong>Bachelor of Technology, Computer Science</strong><br>
+        KL University, India <br>
+        <span style="color:#888;">2017 – 2021</span>
+      </li>
+    </ul>
+  </section>
+  <section id="skills">
+    <h2>🔧 Technical Skills</h2>
+    <strong>Languages & Querying:</strong><br>
+      <span class="chip">SQL</span>
+      <span class="chip">Python</span>
+      <span class="chip">R</span>
+      <span class="chip">Excel (Advanced)</span>
+    <br><br>
+    <strong>Visualization:</strong><br>
+      <span class="chip">Power BI</span>
+      <span class="chip">Tableau</span>
+      <span class="chip">Matplotlib</span>
+    <br><br>
+    <strong>Database Systems:</strong><br>
+      <span class="chip">MS SQL Server</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">MySQL</span>
+    <br><br>
+    <strong>Key Concepts:</strong><br>
+    <span class="chip">Data Modeling</span>
+    <span class="chip">ETL</span>
+    <span class="chip">Statistical Analysis</span>
+    <span class="chip">Predictive Analytics</span>
+    <span class="chip">KPI Tracking</span>
+    <br><br>
+    <strong>Tools & Workflow:</strong><br>
+    <span class="chip">Jupyter</span>
+    <span class="chip">Git</span>
+    <span class="chip">Agile/Scrum</span>
+  </section>
+  <section id="projects">
+    <h2>📊 Data Projects</h2>
+    <ul>
+      <li>
+        <strong>Amazon Best Seller Analytics:</strong> Built an automated pipeline for ETL and visualization of Amazon software data. Delivered actionable price/category insights to boost sales.
+      </li>
+      <li>
+        <strong>Shark Tank Funding Trends:</strong> Created interactive Tableau dashboards highlighting US startup deal patterns, investor decisions & pitching strategies.
+      </li>
+      <li>
+        <strong>Fitness Tracker Database:</strong> Modeled and implemented a normalized SQL db to support multi-user fitness analytics and custom dashboards.
+      </li>
+      <li>
+        <strong>Sales KPI Power BI Suite:</strong> Developed Power BI dashboard suite for tracking sales and operational KPIs, automating data refresh and report sharing.
+      </li>
+      <li>
+        <strong>Customer Retention Predictive Model (Demo):</strong> Designed and deployed a Python-driven churn model, increasing customer insight by 30%.
+      </li>
+    </ul>
+  </section>
+  <section id="experience">
+    <h2>💼 Professional Experience</h2>
+    <strong>Northern Illinois University</strong>, Student Manager <span style="color:#888;">(Aug 2023 – May 2025)</span>
+    <ul>
+      <li>Led analytics team delivering automated workflow improvements (Excel, Power BI, SQL).</li>
+      <li>Centralized multi-source data, providing accessible insights to leadership.</li>
+      <li>Automated data cleaning with Python—cut manual work by 30%.</li>
+    </ul>
+    <strong>CGI, Bangalore</strong>, Associate Systems Engineer <span style="color:#888;">(Sep 2021 – Jan 2023)</span>
+    <ul>
+      <li>Reduced reporting time 50% by optimizing SQL and automating ETL.</li>
+      <li>Developed enterprise BI dashboards for 100+ users (Power BI, SQL Server).</li>
+      <li>Trained junior analysts in dashboards and fast reporting best practices.</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>📬 Contact</h2>
+    <div>
+      <p>Let's connect! Available for full-time, contract, and freelance data analyst roles.</p>
+      <ul>
+        <li><i class="fa fa-envelope"></i> <a class="link" href="mailto:vempatibalateja98@gmail.com">vempatibalateja98@gmail.com</a></li>
+        <li><i class="fa fa-phone"></i> <a class="link" href="tel:+17792767123">+1 779-276-7123</a></li>
+        <li><i class="fab fa-linkedin"></i> <a class="link" href="https://www.linkedin.com/in/balateja12/">LinkedIn: balateja12</a></li>
+      </ul>
+    </div>
+  </section>
   <footer>
-    &copy; 2025 Bala Teja Vempati | Powered by GitHub Pages
+    &copy; 2025 Bala Teja Vempati | Data Analyst Portfolio | Powered by GitHub Pages
   </footer>
+  <script>
+    // Section visibility and smooth scroll
+    document.querySelectorAll('section').forEach(s=>s.style.display='none');
+    // Show home stats
+    window.addEventListener("DOMContentLoaded", () => {
+      // Animate stats
+      animateNumber('stat-exp',0,3,1100); animateNumber('stat-pro',0,5,1000); animateNumber('stat-tools',0,10,1300);
+      // Show home by default
+      showSection();
+    });
+    function showSection(id){
+      document.querySelectorAll('section').forEach(s=>{
+        if((!id && s.id==='education')||s.id===id){s.classList.add('visible'); s.style.display='block';}
+        else{s.classList.remove('visible');s.style.display='none';}
+      });
+      document.querySelectorAll('.cta-btn').forEach(b=>b.classList.remove('active'));
+      if(id)document.querySelector('.cta-btn[onclick*="'+id+'"]').classList.add('active');
+      window.scrollTo({top: document.querySelector('header').offsetHeight-10,behavior:'smooth'});
+    }
+    // Animated stat counter
+    function animateNumber(id, start, end, duration){
+      const obj = document.getElementById(id); let startTs=null;
+      function step(ts){
+        if(!startTs)startTs=ts;
+        const p = Math.min((ts-startTs)/duration,1);
+        obj.textContent = Math.floor(p*(end-start)+start);
+        if(p<1) requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    }
+  </script>
 </body>
 </html>
