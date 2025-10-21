@@ -18,31 +18,29 @@
     body {font-family: 'Montserrat', Arial, sans-serif; background: var(--bg); color: #173046; margin: 0;}
     header {background: linear-gradient(90deg,#dbeafe 55%,#bae6fd 100%);padding:52px 0 25px 0;box-shadow: var(--shadow);}
     .container {max-width: 920px; margin: 0 auto; padding: 0 12px;}
-    .profile-photo {width:124px;height:124px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow: var(--shadow);}
-    .title {font-size:2.5em;font-weight:700;color:var(--primary);}
+    .profile-photo {width:120px;height:120px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow: var(--shadow);}
+    .title {font-size:2.4em;font-weight:700;color:var(--primary);}
     .subtitle {font-weight:500; font-size:1.2em; color: #155292;}
     .about {margin-top: 22px; font-size: 1.18em;}
     .cta-btns {margin:28px 0;}
-    .cta-btn {background: var(--primary); color: #fff; border:none; border-radius:22px; padding:13px 33px; margin:8px 9px; font-size:1em; font-weight: 600;
-      cursor: pointer; box-shadow: 0 4px 20px rgba(30,130,230,0.09); transition: transform .18s,box-shadow .13s;}
+    .cta-btn {background: var(--primary); color: #fff; border:none; border-radius:22px; padding:13px 33px; margin:8px 9px; font-size:1em; font-weight: 600; cursor: pointer; box-shadow: 0 4px 20px rgba(30,130,230,0.09); transition: transform .18s,box-shadow .13s;}
     .cta-btn:hover, .cta-btn.active {background: #0f6680; color: #fff; transform: translateY(-1px) scale(1.06);}
-    .animated-stats {display:flex;gap:30px;justify-content:center;margin:30px 0 0 0;}
-    .stat-card {background: #f9fafb; border-radius: 12px; box-shadow: var(--shadow); padding: 18px 26px;text-align:center;}
-    .stat-number {font-size:2em;font-weight:700;color:var(--primary);}
     section {background: var(--section-bg); border-radius:18px; margin:60px auto 36px auto; box-shadow:var(--shadow);padding:38px 28px;max-width: 760px; opacity:0; transform: translateY(60px); transition:.7s;}
     section.visible {opacity:1;transform: translateY(0);}
     h2 {color: var(--primary);font-size:2em;margin-top:0;}
-    strong{color:#294466;}
     ul,li{margin: 10px 0;line-height:1.75em;}
-    .icons {margin-right:13px;}
-    .chip {display:inline-block;background:#bfdbfe;color:#0f4067;font-size:1em; border-radius:20px;padding:7px 16px;margin:6px 7px 2px 0;}
+    .chip {display:inline-block;background:#bfdbfe;color:#0f4067;font-size:1em; border-radius:21px;padding:8px 16px;margin:7px 7px 1px 0;}
+    .project-block{margin-bottom:36px;}
+    .project-title{font-size:1.35em;font-weight:bold;color:#0a416d; margin-bottom:8px;}
+    .project-role{color: #777; font-size:1em;}
+    .project-tags{margin-top: 5px; margin-bottom: 18px;}
+    .project-tags .chip{background:#f0f9ff;color:#0f4067;}
+    .project-summary{font-size:1.12em;}
+    .project-details{margin-top:13px;padding-left:18px;}
+    .project-details li{font-size:1.04em;}
     .link, .link:visited {color: var(--primary); text-decoration: underline;}
     footer {text-align:center;color:#aaa;padding:18px 0 24px 0;}
-    /* Animations */
-    @media (max-width:650px) {
-      .animated-stats{flex-direction:column;}
-      section{padding:20px 5px;}
-    }
+    @media (max-width:650px) {section{padding:20px 5px;}}
   </style>
 </head>
 <body>
@@ -51,27 +49,15 @@
       <img src="profile.jpg" alt="Bala Teja Vempati" class="profile-photo" onerror="this.style.display='none'"/>
       <div class="title">Bala Teja Vempati</div>
       <div class="subtitle">Data Analyst | BI Developer | Data Enthusiast</div>
-      <div class="about">Transforming data into actionable insights. 3+ years of proven success in analytics, dashboarding & data-driven storytelling for decisions that matter.</div>
-      <div class="cta-btns">
-        <button class="cta-btn" onclick="showSection('education')"><i class="fa fa-graduation-cap icons"></i>Education</button>
-        <button class="cta-btn" onclick="showSection('skills')"><i class="fa fa-laptop-code icons"></i>Skills</button>
-        <button class="cta-btn" onclick="showSection('projects')"><i class="fa fa-chart-bar icons"></i>Projects</button>
-        <button class="cta-btn" onclick="showSection('experience')"><i class="fa fa-briefcase icons"></i>Experience</button>
-        <button class="cta-btn" onclick="showSection('contact')"><i class="fa fa-envelope icons"></i>Contact</button>
+      <div class="about">
+        I’m a data analyst passionate about translating data into actionable business insight. My expertise spans analytics, dashboarding & data storytelling with a focus on robust, scalable solutions. I thrive at the crossroads of business and technology—transforming data into growth opportunities.
       </div>
-      <div class="animated-stats">
-        <div class="stat-card">
-          <div class="stat-number" id="stat-exp">0</div>
-          <div>Years Experience</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" id="stat-pro">0</div>
-          <div>Completed Projects</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" id="stat-tools">0</div>
-          <div>Tools Mastered</div>
-        </div>
+      <div class="cta-btns">
+        <button class="cta-btn" onclick="showSection('education')"><i class="fa fa-graduation-cap"></i> Education</button>
+        <button class="cta-btn" onclick="showSection('skills')"><i class="fa fa-laptop-code"></i> Skills</button>
+        <button class="cta-btn" onclick="showSection('projects')"><i class="fa fa-chart-bar"></i> Projects</button>
+        <button class="cta-btn" onclick="showSection('experience')"><i class="fa fa-briefcase"></i> Experience</button>
+        <button class="cta-btn" onclick="showSection('contact')"><i class="fa fa-envelope"></i> Contact</button>
       </div>
     </div>
   </header>
@@ -91,15 +77,16 @@
       </li>
     </ul>
   </section>
+
   <section id="skills">
     <h2>🔧 Technical Skills</h2>
-    <strong>Languages & Querying:</strong><br>
+    <strong>Languages & Analytics:</strong><br>
       <span class="chip">SQL</span>
       <span class="chip">Python</span>
       <span class="chip">R</span>
       <span class="chip">Excel (Advanced)</span>
     <br><br>
-    <strong>Visualization:</strong><br>
+    <strong>Visualization & BI Tools:</strong><br>
       <span class="chip">Power BI</span>
       <span class="chip">Tableau</span>
       <span class="chip">Matplotlib</span>
@@ -116,50 +103,103 @@
     <span class="chip">Predictive Analytics</span>
     <span class="chip">KPI Tracking</span>
     <br><br>
-    <strong>Tools & Workflow:</strong><br>
+    <strong>Workflow & Tools:</strong><br>
     <span class="chip">Jupyter</span>
     <span class="chip">Git</span>
     <span class="chip">Agile/Scrum</span>
+    <span class="chip">SDLC</span>
   </section>
+
   <section id="projects">
-    <h2>📊 Data Projects</h2>
-    <ul>
-      <li>
-        <strong>Amazon Best Seller Analytics:</strong> Built an automated pipeline for ETL and visualization of Amazon software data. Delivered actionable price/category insights to boost sales.
-      </li>
-      <li>
-        <strong>Shark Tank Funding Trends:</strong> Created interactive Tableau dashboards highlighting US startup deal patterns, investor decisions & pitching strategies.
-      </li>
-      <li>
-        <strong>Fitness Tracker Database:</strong> Modeled and implemented a normalized SQL db to support multi-user fitness analytics and custom dashboards.
-      </li>
-      <li>
-        <strong>Sales KPI Power BI Suite:</strong> Developed Power BI dashboard suite for tracking sales and operational KPIs, automating data refresh and report sharing.
-      </li>
-      <li>
-        <strong>Customer Retention Predictive Model (Demo):</strong> Designed and deployed a Python-driven churn model, increasing customer insight by 30%.
-      </li>
-    </ul>
+    <h2>📊 Projects</h2>
+
+    <div class="project-block">
+      <div class="project-title">Shark Tank US Deal Analysis</div>
+      <div class="project-role">Lead Data Analyst & Tableau Developer</div>
+      <div class="project-tags">
+        <span class="chip">Tablueau</span> <span class="chip">Data Visualization</span>
+        <span class="chip">Storytelling</span> <span class="chip">Venture Capital</span>
+        <span class="chip">Python</span>
+      </div>
+      <div class="project-summary">
+        <strong>Overview:</strong> An in-depth analysis of the Shark Tank US dataset to unravel factors driving deal success, funding trends across industries, and investor behaviors. Delivered an interactive Tableau dashboard targeted at aspiring entrepreneurs and startup enthusiasts.
+      </div>
+      <ul class="project-details">
+        <li><strong>Data Source:</strong> Kaggle Shark Tank US data—1,362 pitches, 53 fields, covering entrepreneur backgrounds, startup industries, and funding outcomes.</li>
+        <li><strong>Objective:</strong> Identify what makes pitches succeed—by industry, geography, entrepreneur traits, deal size/equity, and investor pattern.</li>
+        <li>Performed extensive data cleaning, feature engineering, and storyboarding to present compelling, business-relevant insights—not just raw numbers.</li>
+        <li>Created engaging visualizations:
+          <ul>
+             <li>Deal success rates by industry.</li>
+             <li>Distribution of equity offers across states.</li>
+             <li>Diversity and gender analysis in funded startups.</li>
+             <li>Multi-shark vs single-shark trends over time.</li>
+          </ul>
+        </li>
+        <li><strong>Key Findings:</strong> Success skews toward food, health, and tech; Sharks favor founders who know their numbers; reasonable valuations unlock deals; storytelling and vision matter as much as metrics.</li>
+        <li>Resulted in a practical resource for founders who want an edge in venture funding or Shark Tank fans seeking behind-the-scenes trends.</li>
+        <li>
+          <strong>Tools:</strong> Tableau for dashboarding, Python for exploratory data analysis (EDA) and wrangling.
+        </li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">Amazon Best Seller Software Analysis</div>
+      <div class="project-role">Data Pipeline Designer & ML Modeler</div>
+      <div class="project-tags">
+        <span class="chip">Python</span> <span class="chip">ML Regression</span>
+        <span class="chip">EDA</span> <span class="chip">Power BI</span>
+        <span class="chip">Amazon Marketplace</span>
+      </div>
+      <div class="project-summary">
+        <strong>Overview:</strong> This project uncovers the key drivers of software ranking and sales on Amazon by analyzing over 2,400 software products. The analysis supports pricing and marketing strategies with actionable predictive insights.
+      </div>
+      <ul class="project-details">
+        <li><strong>Dataset:</strong> Kaggle, including product title, price, star rating, number of ratings, rank, and country.</li>
+        <li><strong>Methodology:</strong>
+          <ul>
+            <li>Data cleaning and advanced feature engineering for category, price tier, popularity, price-per-rating, etc.</li>
+            <li>Exploratory analysis to reveal patterns in pricing, ratings, and review volumes across top software categories.</li>
+            <li>Applied Linear Regression and Random Forest Regressor to predict marketplace rank and reveal key feature importance.</li>
+            <li>Validated models with RMSE and R-squared on training/test data.</li>
+          </ul>
+        </li>
+        <li><strong>Key Insights:</strong>
+          <ul>
+            <li>Category and review volume are strong predictors of sales performance.</li>
+            <li>Random Forest model captured non-linear factors better than linear regression, significantly outperforming it in accuracy.</li>
+            <li>Strategic priorities: focus on exceeding 4.0-star reviews, encourage more ratings, segment pricing strategies by category.</li>
+          </ul>
+        </li>
+        <li><strong>Business Impact:</strong> Armed software companies and sellers with practical steps to dominate Amazon’s competitive landscape based on data-driven, nuanced findings.</li>
+        <li>
+          <strong>Tools:</strong> Python (Pandas, Scikit-learn), Power BI, predictive modeling, data storytelling.
+        </li>
+      </ul>
+    </div>
+
   </section>
+
   <section id="experience">
     <h2>💼 Professional Experience</h2>
     <strong>Northern Illinois University</strong>, Student Manager <span style="color:#888;">(Aug 2023 – May 2025)</span>
     <ul>
-      <li>Led analytics team delivering automated workflow improvements (Excel, Power BI, SQL).</li>
-      <li>Centralized multi-source data, providing accessible insights to leadership.</li>
-      <li>Automated data cleaning with Python—cut manual work by 30%.</li>
+      <li>Supervised analytics team; built automated dashboards for workflow and engagement insights.</li>
+      <li>Designed and migrated centralized databases and led process improvements for data quality and reporting accuracy.</li>
+      <li>Presented insights and KPIs to leadership, driving data-based decision-making.</li>
     </ul>
     <strong>CGI, Bangalore</strong>, Associate Systems Engineer <span style="color:#888;">(Sep 2021 – Jan 2023)</span>
     <ul>
-      <li>Reduced reporting time 50% by optimizing SQL and automating ETL.</li>
-      <li>Developed enterprise BI dashboards for 100+ users (Power BI, SQL Server).</li>
-      <li>Trained junior analysts in dashboards and fast reporting best practices.</li>
+      <li>Optimized SQL procedures and scripted ETL logic, reducing reporting cycles and delivering accurate, timely dashboards.</li>
+      <li>Collaborated in agile teams to deliver BI and analytics solutions for government/enterprise clients.</li>
+      <li>Trained junior hires and championed best practices in SQL, BI, and agile analytics delivery.</li>
     </ul>
   </section>
   <section id="contact">
     <h2>📬 Contact</h2>
     <div>
-      <p>Let's connect! Available for full-time, contract, and freelance data analyst roles.</p>
+      <p>Let’s connect! Available for full-time, contract, and freelance data analyst roles.</p>
       <ul>
         <li><i class="fa fa-envelope"></i> <a class="link" href="mailto:vempatibalateja98@gmail.com">vempatibalateja98@gmail.com</a></li>
         <li><i class="fa fa-phone"></i> <a class="link" href="tel:+17792767123">+1 779-276-7123</a></li>
@@ -173,13 +213,8 @@
   <script>
     // Section visibility and smooth scroll
     document.querySelectorAll('section').forEach(s=>s.style.display='none');
-    // Show home stats
-    window.addEventListener("DOMContentLoaded", () => {
-      // Animate stats
-      animateNumber('stat-exp',0,3,1100); animateNumber('stat-pro',0,5,1000); animateNumber('stat-tools',0,10,1300);
-      // Show home by default
-      showSection();
-    });
+    // Show education/home by default
+    window.addEventListener("DOMContentLoaded", () => {showSection();});
     function showSection(id){
       document.querySelectorAll('section').forEach(s=>{
         if((!id && s.id==='education')||s.id===id){s.classList.add('visible'); s.style.display='block';}
@@ -188,16 +223,6 @@
       document.querySelectorAll('.cta-btn').forEach(b=>b.classList.remove('active'));
       if(id)document.querySelector('.cta-btn[onclick*="'+id+'"]').classList.add('active');
       window.scrollTo({top: document.querySelector('header').offsetHeight-10,behavior:'smooth'});
-    }
-    // Animated stat counter
-    function animateNumber(id, start, end, duration){
-      const obj = document.getElementById(id); let startTs=null;
-      function step(ts){
-        if(!startTs)startTs=ts;
-        const p = Math.min((ts-startTs)/duration,1);
-        obj.textContent = Math.floor(p*(end-start)+start);
-        if(p<1) requestAnimationFrame(step);}
-      requestAnimationFrame(step);
     }
   </script>
 </body>
